@@ -4,6 +4,8 @@ import functions
 
 
 todos = functions.get_todos()
+st.set_page_config(layout="wide")
+
 def add_todo():
     todo = st.session_state['new_todo'] + "\n"
     todos.append(todo)
@@ -25,6 +27,5 @@ for index, item in enumerate(todo_items):
         del st.session_state[item]
         st.rerun()
 
-st.session_state
 
 
